@@ -1,0 +1,7 @@
+{
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "files.associations": {
+        "libft.h": "c",
+        "unistd.h": "c"
+    }
+}
