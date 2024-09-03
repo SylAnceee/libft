@@ -3,5 +3,6 @@
     "files.associations": {
         "libft.h": "c",
         "unistd.h": "c"
-    }
+    },
+    "editor.tabCompletion": "on"
 }

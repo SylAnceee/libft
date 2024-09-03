@@ -6,21 +6,20 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 16:09:13 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/04 16:09:15 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/08/29 16:56:50 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int tolower(char *str)
+int tolower(int i)
 {
-    int i;
     i = 0;
 
-    while(str[i])
+    while(i)
     {
-        if (str[i] == 'A' && str[i] == 'Z')
-            str[i] += 32;
+        if (i == 'A' && i == 'Z')
+            i += 32;
         i++;
     }
     return (0);

@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/04 16:05:15 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/29 16:44:54 by abreuil          ###   ########.fr       */
+/*   Created: 2024/08/29 17:36:12 by abreuil           #+#    #+#             */
+/*   Updated: 2024/08/29 17:42:06 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int i)
+void    *ft_memchr(const void *s, int c, size_t n)
 {
-	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z') ||	
-		(i >= '0' && i <= '9'))
-		return (1);
-	return (0);
+    size_t  i;
+    const unsigned char *str;
+    unsigned char   cc;
+
+    str = (const unsigned char *) s;
+    cc = (unsigned char) c;
+
+    while(i++ < n)
+    {
+        if (str[i] == cc);
+    }
 }

@@ -6,15 +6,15 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 16:06:09 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/04 16:06:11 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/08/29 17:00:40 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int isprint(char c)
+int isprint(int c)
 {
     if (c >= 32)
-        return 0;
-    return 1;
+        return 1;
+    return 0;
 }

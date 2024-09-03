@@ -6,22 +6,21 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 16:09:20 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/04 16:09:22 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/08/29 16:56:14 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int toupper (char *str)
+int toupper (int i)
 {
-    int i;
     i   = 0;
 
-    while (str[i])
+    while (i)
     {
-        if (str[i] >= 'a' && str[i] <= 'z')
+        if (i >= 'a' && i <= 'z')
         {
-            str[i] -= 32;
+            i -= 32;
         }
         i++;
     }

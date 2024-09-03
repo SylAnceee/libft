@@ -6,7 +6,7 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 20:14:32 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/04 16:09:07 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/08/30 22:16:31 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strncpy(char *dest, char *src, int n)
 	return (dest);
 }
 
-int main() {
+/*int main() {
     char src[] = "Hello, world!";
     char dest1[20];
     char dest2[20];
@@ -56,3 +56,4 @@ int main() {
 
     return 0;
 }
+*/

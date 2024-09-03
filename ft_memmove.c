@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 13:02:50 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/31 12:46:52 by abreuil          ###   ########.fr       */
+/*   Created: 2024/08/29 14:17:51 by abreuil           #+#    #+#             */
+/*   Updated: 2024/08/29 17:28:40 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, char *src, size_t n)
+void    *ft_memmove(void *dest, const void *src, size_t n)
 {
-    size_t i;
-    size_t j;
+    size_t  i;
     
     i = 0;
+    unsigned char *d; 
+    const unsigned char *s;
+    
+    d = (unsigned char *) dest;
+    s = (const unsigned char *) src;
 
-    while(dest[i] < n)
+    if (d == s || n == 0)
+        return (dest);
+    if (d < s)
+        {
+            while(i++ < n)
+                d[i] = s[i];
+        }
+    else 
     {
-        i++;
-        j++;
+        while (i > n)
+        {
+            d[i] = s[i];
+            i--;
+        }
     }
-    i = 0;
-    
+    return (d);   
 }

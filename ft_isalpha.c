@@ -6,16 +6,16 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 16:05:41 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/04 16:05:45 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/08/29 16:59:48 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isalpha(char c)
+int	isalpha(int c)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z')
-		return (0);
-	else
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
+	else
+		return (0);
 }

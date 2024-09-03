@@ -6,7 +6,7 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/02 19:13:57 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/04 16:06:21 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/08/29 10:30:07 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void *ft_memset(void *s, int c, size_t n)
 {
     unsigned char *p = s;
-    while(n)
+    while (n)
     {
         *p++ = (unsigned char) c;
         n--;
