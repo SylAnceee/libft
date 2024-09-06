@@ -6,7 +6,7 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 14:46:30 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/04 16:08:01 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/04 12:33:10 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,8 @@ void    ft_putstr_fd(char *str, int fd)
     
     i = 0;
     while(str[i])
-		ft_putchar_fd(str[i], fd);
+    {
+		  ft_putchar_fd(str[i], fd);
+      i++;
+    }
 }

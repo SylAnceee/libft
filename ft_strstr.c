@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/04 16:08:28 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/04 16:08:36 by abreuil          ###   ########.fr       */
+/*   Created: 2024/09/03 18:09:46 by abreuil           #+#    #+#             */
+/*   Updated: 2024/09/03 18:19:52 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void    ft_putstr(char *str)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-    int i;
+	size_t	i;
+	size_t	j;
 
-    i = 0;
-    while(str[i])
-        {
-            write (1, &str[i], 1);
-            i++;
-        }
+	if (!*needle)
+		return ((char *)haystack);
+	i = 0;
+	while (haystack[i])
+	{   
+		j = 0;
+		while (haystack[i + j] && needle[j] && haystack[i + j] == needle[j])
+			j++;
+		if (!needle[j])
+			return ((char *)&haystack[i]);
+		i++;
+	}
+	return (NULL);
 }
-
-/*int main (int ac, char **av)
-{
-    if (ac == 2)
-    {
-    /*    ft_putstr(av[1]);
-    }
-    return 0;
-}*/

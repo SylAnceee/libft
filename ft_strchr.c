@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 13:02:50 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/03 13:28:31 by abreuil          ###   ########.fr       */
+/*   Created: 2024/09/03 13:39:50 by abreuil           #+#    #+#             */
+/*   Updated: 2024/09/03 17:40:44 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, char *src, size_t n)
+char *ft_strchr(const char *s, int c);
 {
-    size_t i;
-    size_t j;
-
-    j = 0;
-    i = ft_strlen(src)
-    while(j < n && src[i])
+    while (*s)
     {
-        dest[i + j] = src[j];
-        j++;
+        if (*s == (char c))
+            return ((char *) s);
+        s++;
     }
-    dest[i + j] = '\0';
-    return (dest);
-
+    if (c == '\0')
+        return ((char *));
+    return (NULL);
 }

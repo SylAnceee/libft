@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 13:02:50 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/03 13:28:31 by abreuil          ###   ########.fr       */
+/*   Created: 2024/09/03 12:43:44 by abreuil           #+#    #+#             */
+/*   Updated: 2024/09/04 13:26:36 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strncat(char *dest, char *src, size_t n)
+int ft_memcmp (const void *s1, const void *s2, size_t n)
 {
-    size_t i;
-    size_t j;
+    const unsigned char *str1;
+    const unsigned char *str2;
+    size_t  i;
 
-    j = 0;
-    i = ft_strlen(src)
-    while(j < n && src[i])
+    str1 = (const unsigned char *) s1;
+    str2 = (const unsigned char *) s2;
+    i = 0;
+
+    while(i < n)
     {
-        dest[i + j] = src[j];
-        j++;
+        if (str1[i] < str2[i])
+            return (-1);
+        if (str1[i] > str2[i])
+            return (1);
+        i++;
     }
-    dest[i + j] = '\0';
-    return (dest);
+    return (0);
+}   
 
-}
+
+

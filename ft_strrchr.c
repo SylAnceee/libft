@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/05 13:02:50 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/03 13:28:31 by abreuil          ###   ########.fr       */
+/*   Created: 2024/09/03 17:43:43 by abreuil           #+#    #+#             */
+/*   Updated: 2024/09/03 17:58:50 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, char *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-    size_t i;
-    size_t j;
+	char	*last_occurrence;
 
-    j = 0;
-    i = ft_strlen(src)
-    while(j < n && src[i])
-    {
-        dest[i + j] = src[j];
-        j++;
-    }
-    dest[i + j] = '\0';
-    return (dest);
-
+	last_occurrence = NULL;
+	while (*s)
+	{
+		if (*s == (char)c)
+			last_occurrence = (char *)s;
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return (last_occurrence);
 }

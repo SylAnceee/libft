@@ -2,7 +2,11 @@
     "CodeGPT.apiKey": "CodeGPT Plus Beta",
     "files.associations": {
         "libft.h": "c",
-        "unistd.h": "c"
+        "unistd.h": "c",
+        "string.h": "c"
     },
-    "editor.tabCompletion": "on"
+    "editor.tabCompletion": "on",
+    "C_Cpp.errorSquiggles": "disabled",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
 }
