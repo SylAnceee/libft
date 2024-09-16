@@ -12,15 +12,14 @@
 
 #include "libft.h"
 
-int tolower(int i)
+int	tolower(int i)
 {
-    i = 0;
-
-    while(i)
-    {
-        if (i == 'A' && i == 'Z')
-            i += 32;
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (i)
+	{
+		if (i == 'A' && i == 'Z')
+			i += 32;
+		i++;
+	}
+	return (0);
 }

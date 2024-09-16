@@ -12,17 +12,16 @@
 
 #include "libft.h"
 
-int toupper (int i)
+int	toupper(int i)
 {
-    i   = 0;
-
-    while (i)
-    {
-        if (i >= 'a' && i <= 'z')
-        {
-            i -= 32;
-        }
-        i++;
-    }
-    return (0);
+	i = 0;
+	while (i)
+	{
+		if (i >= 'a' && i <= 'z')
+		{
+			i -= 32;
+		}
+		i++;
+	}
+	return (0);
 }

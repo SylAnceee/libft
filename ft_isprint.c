@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int isprint(int c)
+int	isprint(int c)
 {
-    if (c >= 32)
-        return 1;
-    return 0;
+	if (c >= 32)
+		return (1);
+	return (0);
 }

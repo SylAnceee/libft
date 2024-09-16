@@ -12,20 +12,22 @@
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    unsigned char *p = s;
-    while (n)
-    {
-        *p++ = (unsigned char) c;
-        n--;
-    }
-    return (s);
+	unsigned char	*p;
+
+	p = s;
+	while (n)
+	{
+		*p++ = (unsigned char) c;
+		n--;
+	}
+	return (s);
 }
 
 /*int main()
 {
-    char str[] = "Hello, world!";
-    ft_memset(str, '-', 4);
-    printf("%s\n", str);
+	char str[] = "Hello, world!";
+	ft_memset(str, '-', 4);
+	printf("%s\n", str);
 }*/
