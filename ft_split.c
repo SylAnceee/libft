@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abreuil <abreuil@student.42.fr>            #+#  +:+       +#+        */
+/*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-17 11:21:50 by abreuil           #+#    #+#             */
-/*   Updated: 2024-09-17 11:21:50 by abreuil          ###   ########.fr       */
+/*   Created: 2024/09/17 11:21:50 by abreuil           #+#    #+#             */
+/*   Updated: 2024/09/22 21:54:25 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int num_words(char *str, char *charset)
 	return (wordcount);
 }
 
-char	**ft_strsplit(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**tab;
 	int	words;
