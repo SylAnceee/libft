@@ -6,7 +6,7 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 13:04:26 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/05 13:15:28 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/25 12:49:55 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,11 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	s3 = malloc(len1 + len2 + 1);
-	if (s3 == NULL)
+	if (!s3)
 		return (NULL);
-	ft_strcpy(s3, s1);
-	ft_strcat(s3, s2);
+	ft_memcpy(s3, s1, len1);
+	ft_memcpy(s3 + len1, s2, len2);
+	s3[len1 + len2] = '\0';
 	return (s3);
 }
 

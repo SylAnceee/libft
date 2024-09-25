@@ -5,44 +5,45 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-09-10 17:00:21 by abreuil           #+#    #+#             */
-/*   Updated: 2024-09-10 17:00:21 by abreuil          ###   ########.fr       */
+/*   Created: 2024/09/10 17:00:21 by abreuil           #+#    #+#             */
+/*   Updated: 2024/09/25 15:13:20 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+int	ft_isset(char c, const char *set)
 {
-	if (c == ' ' || c == '\n' || c == '\t')
-		return (1);
+	while (*set)
+	{
+		if (c == *set)
+			return (1);
+		set++;
+	}
 	return (0);
 }
 
-char	*ft_strtrim(const char *s)
+char	*ft_strtrim(const char *s, const char *set)
 {
+	char	*trimmed;
 	size_t	start;
 	size_t	end;
-	size_t	len;
-	char	*new;
+	size_t	trim_size;
 
-	if (!s)
+	if (!s || !set)
 		return (NULL);
 	start = 0;
-	while (s[start] && ft_isspace(s[start]) == 1)
+	while (s[start] && ft_isset(s[start], set) == 1)
 		start++;
-	if (s[start] == '\0')
-		return (ft_strdup(""));
-	end = ft_strlen(s) - 1;
-	while (end > start && ft_isspace(s[end]) == 1)
+	end = ft_strlen(s);
+	while (end > start && ft_isset(s[end - 1], set) == 1)
 		end--;
-	len = end - start + 1;
-	new = (char *)malloc(len + 1);
-	if (!new)
+	trim_size = end - start;
+	trimmed = malloc(trim_size + 1);
+	if (!trimmed)
 		return (NULL);
-	ft_strncpy(new, s + start, len);
-	new[len] = '\0';
-	return (new);
+	ft_strlcpy(trimmed, &s[start], trim_size + 1);
+	return (trimmed);
 }
 
 /*int main() 
@@ -54,10 +55,10 @@ char	*ft_strtrim(const char *s)
     const char *test4 = "\t  Trimming\tExample  \n";
     
     // Trimming results
-    char *result1 = ft_strtrim(test1);
-    char *result2 = ft_strtrim(test2);
-    char *result3 = ft_strtrim(test3);
-    char *result4 = ft_strtrim(test4);
+    char *result1 = ft_strtrim(test1, " ");
+    char *result2 = ft_strtrim(test2, " ");
+    char *result3 = ft_strtrim(test3, " ");
+    char *result4 = ft_strtrim(test4, " ");
 
     // Print results
     printf("Original: \"%s\" -> Trimmed: \"%s\"\n", test1, result1);

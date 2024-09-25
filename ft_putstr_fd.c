@@ -6,13 +6,13 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 14:46:30 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/04 12:33:10 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/23 14:18:31 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *str, int fd)
+void	ft_putstr_fd(const char *str, int fd)
 {
 	int	i;
 

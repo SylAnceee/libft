@@ -6,7 +6,7 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 18:26:29 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/03 18:28:39 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/23 15:21:10 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (-1);
 		if (s1[i] > s2[i])
 			return (1);
+		i++;
 	}
 	return (0);
 }

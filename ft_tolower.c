@@ -6,20 +6,15 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 16:09:13 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/29 16:56:50 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/25 15:19:35 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	tolower(int i)
+int	ft_tolower(int c)
 {
-	i = 0;
-	while (i)
-	{
-		if (i == 'A' && i == 'Z')
-			i += 32;
-		i++;
-	}
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

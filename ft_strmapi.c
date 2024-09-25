@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/29 14:04:10 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/29 17:16:12 by abreuil          ###   ########.fr       */
+/*   Created: 2024/09/25 11:49:25 by abreuil           #+#    #+#             */
+/*   Updated: 2024/09/25 15:16:38 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	size_t				i;
-	unsigned char		*d;
-	const unsigned char	*s;
-	unsigned char		cc;
+	char			*new_str;
+	unsigned int	i;
 
+	if (!s || !f)
+		return (NULL);
+	new_str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!new_str)
+		return (NULL);
 	i = 0;
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	cc = (unsigned char)c;
-	while (i < n)
+	while (s[i])
 	{
-		d[i] = s[i];
-		if (s[i] == cc)
-			return ((void *)d + i + 1);
+		new_str[i] = f(i, s[i]);
 		i++;
 	}
-	return (NULL);
+	new_str[i] = '\0';
+	return (new_str);
 }

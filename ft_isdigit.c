@@ -6,16 +6,13 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 16:05:58 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/05 13:14:00 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/25 15:17:13 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isdigit(int i)
+int	ft_isdigit(int c)
 {
-	if (i >= '0' && i <= '9')
-		return (0);
-	else
-		return (1);
+	return (c >= '0' && c <= '9');
 }

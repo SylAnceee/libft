@@ -6,22 +6,15 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 16:09:20 by abreuil           #+#    #+#             */
-/*   Updated: 2024/08/29 16:56:14 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/23 15:14:05 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	toupper(int i)
+int	ft_toupper(int c)
 {
-	i = 0;
-	while (i)
-	{
-		if (i >= 'a' && i <= 'z')
-		{
-			i -= 32;
-		}
-		i++;
-	}
-	return (0);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

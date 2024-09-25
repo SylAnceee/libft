@@ -6,7 +6,7 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 21:42:05 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/23 13:56:17 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/25 15:18:32 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	void current;
-	size_t flag;
+	int		i;
+	t_list	*tmp;
+
 	if (!lst)
 		return (0);
-	flag = 0;
-	while (current != NULL)
+	i = 0;
+	tmp = lst;
+	while (tmp)
 	{
-		flag++;
-		current = current->next
+		tmp = tmp->next;
+		i++;
 	}
-	return (flag);
+	free(tmp);
+	return (i);
 }

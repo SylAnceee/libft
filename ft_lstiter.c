@@ -6,20 +6,20 @@
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 17:48:55 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/23 13:56:27 by abreuil          ###   ########.fr       */
+/*   Updated: 2024/09/25 15:18:50 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!lst)
-		return;
-	t_list *curr;
+	t_list	*curr;
 
-	curr = *lst;
-	while(curr != NULL)
+	if (!lst)
+		return ;
+	curr = lst;
+	while (curr != NULL)
 	{
 		f(curr->content);
 		curr = curr->next;

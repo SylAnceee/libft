@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abreuil <abreuil@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/03 13:07:00 by abreuil           #+#    #+#             */
-/*   Updated: 2024/09/03 13:31:36 by abreuil          ###   ########.fr       */
+/*   Created: 2024/09/25 11:43:11 by abreuil           #+#    #+#             */
+/*   Updated: 2024/09/25 15:21:09 by abreuil          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, const char *src)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
-	size_t	j;
+	unsigned int	i;
 
-	j = 0;
-	i = ft_strlen(src);
-	while (src[i])
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
 	{
-		dest[i + j] = src[j];
-		j++;
+		(*f)(i, &s[i]);
+		i++;
 	}
-	dest[i + j] = '\0';
-	return (dest);
 }
